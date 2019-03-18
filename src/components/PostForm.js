@@ -11,43 +11,35 @@ class PostForm extends Component {
       body: '',
     };
 
-    this.onChangeBody = this.onChangeBody.bind(this);
-    this.onChangeTitle = this.onChangeTitle.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  onChangeTitle(event) {
-    this.setState({title: event.target.value});
+  handleChange(event) {
+    this.setState({[event.target.name]: event.target.value});
   }
 
-  onChangeBody(event) {
-    this.setState({body: event.target.value});
-  }
-
-  onSubmit(event) {
+  handleSubmit(event) {
     event.preventDefault();
 
-    const post = {
+    this.props.createPost({
       title: this.state.title,
       body: this.state.body,
-    };
-
-    //call action
-    this.props.createPost(post);
+    });
   }
 
   render() {
     return (
       <div>
         <h1>add post</h1>
-        <form action="" onSubmit={this.onSubmit}>
+        <form action="" onSubmit={this.handleSubmit}>
           <div>
             <label>Title: </label>
-            <input type="text" name="title" onChange={this.onChangeTitle} value={this.state.title}/>
+            <input type="text" name="title" onChange={this.handleChange} value={this.state.title}/>
           </div>
           <div>
             <label>Body: </label>
-            <input type="text" name="body" onChange={this.onChangeBody} value={this.state.body}/>
+            <input type="text" name="body" onChange={this.handleChange} value={this.state.body}/>
           </div>
           <br/>
           <button type="submit">submit</button>
