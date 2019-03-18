@@ -4,13 +4,10 @@ import {connect} from 'react-redux';
 import {createPost} from '../actions/postActions';
 
 class PostForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: '',
-      body: '',
-    };
-  }
+  state = {
+    title: '',
+    body: '',
+  };
 
   handleChange = event => {
     this.setState({[event.target.name]: event.target.value});
