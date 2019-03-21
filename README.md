@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# M.I.T Todo App
+
+[Demo App in react](https://mit-todo-react.netlify.com/)
+
+This Todo Demo App implemented with `react.js`.
+
+I have also implemented the Todo App with `vue,js` and `react.js+redux`:
+- [Demo Todo in Vue.js](https://mit-todo.netlify.com/)
+- [Demo Todo in react.js with Redux](https://mit-todo-redux.netlify.com/)
+
+## What is `MITs`
+Never feel overwhelmed at work again- the M.I.T. technique. A `Most Important Task (MIT)` is a 
+critical task that will create the most significant results. 
+Every day, create a list of `two or three M.I.T.s`, and focus on getting them done as soon as 
+possible. Keep this list separate from your general to-do list. Read more about [MITs](https://personalmba.com/most-important-tasks/).  
 
 ## Available Scripts
 
